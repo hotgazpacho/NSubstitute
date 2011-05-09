@@ -1,11 +1,16 @@
+using System;
 using Castle.DynamicProxy;
 using NSubstitute.Core;
 
 namespace NSubstitute.Proxies.CastleDynamicProxy
 {
+    [Serializable]
     public class CastleForwardingInterceptor : IInterceptor
     {
+        [NonSerialized]
         readonly CastleInvocationMapper _invocationMapper;
+
+        [NonSerialized]
         readonly ICallRouter _callRouter;
 
         public CastleForwardingInterceptor(CastleInvocationMapper invocationMapper, ICallRouter callRouter)

@@ -3,3 +3,4 @@ Castle.DynamicProxy.AbstractInvocation
 Castle.DynamicProxy.InheritanceInvocation
 Castle.DynamicProxy.IProxyTargetAccessor
 Castle.DynamicProxy.Generators.AttributesToAvoidReplicating
+Castle.DynamicProxy.Generators.Emitters.TypeUtil

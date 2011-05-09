@@ -5,12 +5,18 @@ using NSubstitute.Routing.Definitions;
 
 namespace NSubstitute.Core
 {
+    [Serializable]
     public class CallRouter : ICallRouter
     {
+        [NonSerialized]
         readonly ISubstitutionContext _context;
+        [NonSerialized]
         private readonly IReceivedCalls _receivedCalls;
+        [NonSerialized]
         readonly IResultSetter _resultSetter;
+        [NonSerialized]
         IRoute _currentRoute;
+        [NonSerialized]
         IRouteFactory _routeFactory;
 
         public CallRouter(ISubstitutionContext context, IReceivedCalls receivedCalls, IResultSetter resultSetter, IRouteFactory routeFactory)

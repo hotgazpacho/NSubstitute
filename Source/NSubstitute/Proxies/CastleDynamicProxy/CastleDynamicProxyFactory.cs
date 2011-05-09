@@ -43,6 +43,7 @@ namespace NSubstitute.Proxies.CastleDynamicProxy
             return options;
         }
 
+        [Serializable]
         private class AllMethodsExceptCallRouterCallsHook : AllMethodsHook
         {
             public override bool ShouldInterceptMethod(Type type, MethodInfo methodInfo)
