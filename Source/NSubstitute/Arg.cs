@@ -22,6 +22,11 @@ namespace NSubstitute
             return EnqueueArgumentSpec<T>(new ArgumentMatchesSpecification<T>(predicate));
         }
 
+        public static T Is<T>(IArgumentMatcher<T> argumentMatcher)
+        {
+            return EnqueueArgumentSpec<T>(new ArgumentMatcherSpecification<T>(argumentMatcher));
+        }
+
         public static Action Invoke()
         {
             return EnqueueArgumentSpec<Action>(new ArgumentIsAnythingSpecification(typeof(Action)));

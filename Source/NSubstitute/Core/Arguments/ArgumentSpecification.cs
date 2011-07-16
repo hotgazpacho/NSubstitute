@@ -74,6 +74,27 @@ namespace NSubstitute.Core.Arguments
         public override string ToString() { return _predicateDescription; }
     }
 
+    public class ArgumentMatcherSpecification<T> : ArgumentSpecification
+    {
+        public ArgumentMatcherSpecification(IArgumentMatcher<T> matcher)
+            : base(typeof(T))
+        {
+            _matcher = matcher;
+        }
+
+        public override bool IsSatisfiedBy(object argument)
+        {
+            return _matcher.Match((T)argument);
+        }
+
+        public override string ToString()
+        {
+            return string.Join(Environment.NewLine, _matcher.Mismatches.Select(x => x.ToString()).ToArray());
+        }
+
+        private readonly IArgumentMatcher<T> _matcher;
+    }
+
     public class ArrayContentsArgumentSpecification : ArgumentSpecification
     {
         private readonly IEnumerable<IArgumentSpecification> _argumentSpecifications;
