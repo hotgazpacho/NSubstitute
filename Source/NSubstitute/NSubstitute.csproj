@@ -184,12 +184,14 @@
     <Compile Include="Core\Arguments\ArrayArgumentSpecificationsFactory.cs" />
     <Compile Include="Core\Arguments\ArrayContentsArgumentSpecificationFactory.cs" />
     <Compile Include="Core\Arguments\DefaultChecker.cs" />
+    <Compile Include="Core\Arguments\ArgumentMatcher.cs" />
     <Compile Include="Core\Arguments\IArgumentSpecificationFactory.cs" />
     <Compile Include="Core\Arguments\IArrayArgumentSpecificationsFactory.cs" />
     <Compile Include="Core\Arguments\IArrayContentsArgumentSpecificationFactory.cs" />
     <Compile Include="Core\Arguments\INonParamsArgumentSpecificationFactory.cs" />
     <Compile Include="Core\Arguments\IParameterInfosFromParamsArrayFactory.cs" />
     <Compile Include="Core\Arguments\ISuppliedArgumentSpecificationsFactory.cs" />
+    <Compile Include="Core\Arguments\MemberMismatch.cs" />
     <Compile Include="Core\Arguments\NonParamsArgumentSpecificationFactory.cs" />
     <Compile Include="Core\Arguments\IDefaultChecker.cs" />
     <Compile Include="Core\Arguments\IParamsArgumentSpecificationFactory.cs" />
